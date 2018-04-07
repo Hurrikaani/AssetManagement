@@ -12,10 +12,10 @@ namespace AssetManagementWeb.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class AssetLocation
+    public partial class AssetLocationModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AssetLocation()
+        public AssetLocationModel()
         {
             this.AssetsLocations = new HashSet<AssetsLocations>();
         }

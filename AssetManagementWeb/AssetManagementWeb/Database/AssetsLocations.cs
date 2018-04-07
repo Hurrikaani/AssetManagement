@@ -19,7 +19,7 @@ namespace AssetManagementWeb.Database
         public Nullable<int> AssetId { get; set; }
         public Nullable<System.DateTime> LastSeen { get; set; }
     
-        public virtual AssetLocation AssetLocation { get; set; }
+        public virtual AssetLocationModel AssetLocation { get; set; }
         public virtual Assets Assets { get; set; }
     }
 }
