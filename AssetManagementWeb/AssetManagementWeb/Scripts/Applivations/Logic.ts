@@ -8,19 +8,21 @@
 function initAssetAssigment() {
     $("#AssignAssetButton").click(function () {
 
-        var locationCode: string = ("#LocationCOde").valueOf();
-        var assetCode: string = ("#AssetCode").valueOf();
+        var locationCode: string = $("#LocationCode").val();
+        var assetCode: string = $("#AssetCode").val();
 
-        alert(":L " + locationCode + ", A:" + assetCode);
+        alert("L: " + locationCode + ", A:" + assetCode);
         var data: AssignLocationModel = new AssignLocationModel();
         data.LocationCode = locationCode;
         data.AssetCode = assetCode;
 
         $.ajax({
             type: "POST",
-            url: "Asset/AssignLocation",
+            url: "/Asset/AssignLocation",
+            data: JSON.stringify(data),
+            contentType: "applivations/json",
             success: function (data) {
-                if (data.success == true) {
+                if (data.success === true) {
                     alert("Asset succesfully assigned");
                 }
                 else {

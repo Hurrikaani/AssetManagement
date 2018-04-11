@@ -9,5 +9,9 @@ namespace AssetManagementWeb.Models
     {
         public string AssetCode { get; set; }
         public string LocationCode { get; set; }
+        public int Id { get; set; }
+        public string LastSeen { get; set; }
+        public int? AssetId { get; set; }
+        public int? LocationId { get; set; }
     }
 }

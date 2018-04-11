@@ -4,7 +4,11 @@
 }
 @section scripts{
 
-<script src="~/Scripts/Applivations/Logic.js"></script>
+    <script src="~/Scripts/Applivations/Logic.js"></script>
+
+
+    @Scripts.Render("~/bundles/jqueryval")
+
     <script>
         $(function () {
             initAssetAssigment();
@@ -16,7 +20,7 @@
 
 <p>
 
-    <input id="LocationCOde" type="text" placeholder="LocationCode" />
+    <input id="LocationCode" type="text" placeholder="LocationCode" />
 </p>
 
 <p>
@@ -24,5 +28,7 @@
     <input id="AssetCode" type="text" placeholder="AssetCode" />
 </p>
 <input id="AssignAssetButton" type="button" value="AssignAsset" />
+
+
 
 
